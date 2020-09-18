@@ -18,7 +18,7 @@ class CreateOrdersTable extends Migration
             $table->string('ombrellone');
             $table->json('products');
             $table->string('status');
-            $tabòle->decimal('total');
+            $table->decimal('total');
             $table->timestamps();
         });
     }
