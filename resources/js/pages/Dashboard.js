@@ -1,6 +1,8 @@
 import React from 'react';
-
-
+import TotMoney from '../components/cards/TotMoney'
+import TotOrder from '../components/cards/TotOrder';
+import TotProduct from '../components/cards/TotProduct';
+import LastOrders from '../components/LastOrders'
 
 const Dashboard = () => {
     return (
@@ -8,20 +10,13 @@ const Dashboard = () => {
             <h1>Dashboard</h1>
             <div className="row">
                 <div className="col-lg-6">
-                    <div className="cards">
-                    </div>
+                    <TotMoney />
+                    <TotProduct />
+                    <TotOrder />
                 </div>
                 <div className="col-lg-6">
-                    <div className="cards">
-                    </div>
-                </div>
-                <div className="col-lg-6">
-                    <div className="cards">
-                    </div>
-                </div>
-                <div className="col-lg-6">
-                    <div className="cards">
-                    </div>
+                    <h2>Ultimi ordini</h2>
+                    <LastOrders tipo='pending' />
                 </div>
             </div>
         </div>

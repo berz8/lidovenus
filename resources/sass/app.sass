@@ -8,22 +8,271 @@
 *
     box-sizing: border-box
 body
-    background: rgba(0,205,172,0.06)
+    // background: rgba(254, 140,0,0.1)
+    background-color: rgba(150,150,150,0.1)
 
 h1
     font-weight: 800
-    color: rgba(2,170,176,1)
+    color: rgba(248,54,0,1)
     margin-bottom: 35px
+
+.btn
+    border-radius: 20px
+    border: none
+    padding: 5px 20px
+    transition: 200ms all ease
+    box-shadow: 0px 0px 10px rgba(50, 50, 50,0.1)
+    &:hover
+        background-color: rgba(254,140,0,1)
+        opacity: 0.8
+        transform: scale(1.02)
+.btn-primary
+    background-color: rgba(254,140,0,1)
+    &:hover
+        background-color: rgba(254,140,0,1)
+        opacity: 0.8
+        transform: scale(1.02)
+.btn-add
+    display: flex
+    align-items: center
+    width: fit-content
+    svg
+        fill: #ffffff
+        width: 15px
+        height: 15px
+    span
+        margin-left: 8px
 .main
     padding-left: 155px
     padding-top: 30px
+
+.main > div
+    animation: reveal 1s forwards
+    animation-delay: 200ms
+    opacity: 0
+
 .container-fluid
     padding-right: 30px
-.row
-    width: 100%
+/** .row
+    width: 100% **/
 .cards
     border-radius: 30px
-    box-shadow: 0px 0px 20px rgba(2,170,176,0.2)
+    box-shadow: 0px 0px 20px rgba(50, 50, 50,0.2)
     margin-bottom: 30px
-    height: 300px
+    padding: 30px
     background-color: #fff
+    > div
+        display: flex
+        justify-content: space-between
+        div
+            flex: 0 0 50%
+            h2
+                font-size: 3.1rem
+                font-weight: 800
+
+
+
+
+.title-split
+    display: flex
+    align-items: center
+    justify-content: space-between
+    div
+        display: flex
+        .btn-add
+            padding: 5px 10px
+            border-radius: 100%
+            margin-right: 5px
+    h3
+        margin: 0
+
+
+
+
+
+table
+    background-color: #fff
+    border-radius: 30px
+    box-shadow: 0px 0px 20px rgba(50, 50, 50,0.2)
+    width: 100%
+    overflow: hidden
+    margin-top: 30px
+    thead
+        border-bottom: 1px solid #000
+        th
+            padding: 15px 30px
+            svg
+                width: 14px
+                height: 14px
+                margin-left: 5px 
+            svg.rotate
+                transform: rotate(180deg)
+    td
+        padding: 6px 30px
+    tbody
+        tr
+            transition: 200ms all ease
+            &:hover
+                background-color: #ddd
+
+
+.last-orders
+    margin-top: 30px
+.order-list
+    margin: 0px 0px 15px 0px
+    border-radius: 30px
+    background-color: #fff
+    box-shadow: 0px 0px 20px rgba(50, 50, 50,0.2)
+    padding: 16px
+    >div
+        display: flex
+        align-items: center
+        justify-content: space-between
+        padding: 0px 10px
+        h4
+            font-weight: 700
+            span
+                display: block
+                font-size: 0.8rem
+                margin-bottom: 4px
+                font-weight: 500
+
+
+
+.modal
+    width: auto 
+    height: auto 
+    top: 50% 
+    left: 50% 
+    transform: translate(-50%, -50%)
+    box-shadow: 0px 0px 20px rgba(50, 50, 50,0.2)
+    border-radius: 30px
+    position: fixed
+    padding: 50px
+    display: block
+    background-color: #fff
+    .close
+        position: absolute
+        z-index: 3
+        right: 15px
+        top: 15px
+    form
+        .col
+            margin-bottom: 20px
+    div
+        margin: 20px -5px 0px -5px
+        button
+            width: CALC(50% - 20px)
+            margin: 0px 5px
+            display: block
+            float: left
+.modal.newuser
+    input
+        min-width: 300px
+    .btn
+        margin-top: 20px
+
+.file
+    margin-top: 30px
+.fila
+    display: flex
+    flex-wrap: wrap
+    margin-bottom: 15px
+.posto
+    padding: 20px 40px
+    box-shadow: 0px 0px 20px rgba(50, 50, 50,0.2)
+    border-radius: 30px
+    background-color: #fff
+    margin-right: 10px
+    margin-bottom: 5px
+    display: flex
+    transition: 300ms all ease
+    cursor: pointer
+    &:hover
+        box-shadow: 0px 0px 20px rgba(50, 50, 50,0.2)
+        transform: scale(1.02)
+    .detail
+        margin-left: 15px
+        display: flex
+        flex-direction: column
+        justify-content: space-between
+        min-width: 100px
+        .btn
+            padding: 4px
+            display: block
+            width: 100%
+            font-size: 0.7rem
+    span
+        max-width: 150px
+        overflow-wrap: break-word
+        display: block
+.mini-title
+    display: block
+    font-size: 0.7rem
+    margin-bottom: 4px
+
+.row .row .col-lg-12
+    margin-top: 30px
+
+.btn-small
+    background-color: transparent
+    padding: 4px
+    svg
+        width: 17px
+        height: 17px
+
+
+
+
+
+.login
+    svg.logo
+        fill: rgba(254,140,0,1)
+        width: 120px
+        height: 120px
+        margin: 0 auto
+        margin-bottom: 20px
+        display: block
+    h1
+        color: rgba(254,140,0,1)
+        text-align: center
+    img
+        width: 86%
+        margin-top: 20px
+    form 
+        margin-top: 150px
+        padding: 40px
+        box-shadow: 0px 0px 20px rgba(50, 50, 50,0.2)
+        border-radius: 30px
+        background-color: #fff
+
+
+
+
+.order-list ul
+    padding: 5px 13px
+    list-style-type: none
+    li
+        display: flex
+        justify-content: space-between
+        span
+            display: block 
+    li.li-title
+        font-weight: 700
+        font-size: 1rem
+
+
+.product-image
+    section
+        padding: 30px
+        background-color: #fff
+        box-shadow: 0px 0px 20px rgba(50, 50, 50,0.2)
+        img 
+            max-width: 100%
+        p
+            font-weight: 700
+@keyframes reveal
+    0%
+        opacity: 0
+    100%
+        opacity: 1

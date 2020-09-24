@@ -14,6 +14,31 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::middleware('auth:api')->get('/user', function (Request $request) {
-    return $request->user();
+// Login
+Route::post('login', 'AuthController@login');
+
+//Middleware Autenticazione
+Route::group(['middleware' => 'auth:api'], function(){
+    
+    //Operazione CRUD
+    Route::resource('product','ProductController');
+    Route::resource('category','CategoryController');
+    Route::resource('order','OrderController');
+    Route::resource('subscription','SubscriptionController');
+
+    // Ordini da evadere
+    Route::get('pending', 'OrderController@pending');
+    // Ordini evasi
+    Route::get('done', 'OrderController@done');
+    // Action evasione ordine
+    Route::get('evadi-ordine/{id}', 'OrderController@evadi');
+    // Statistiche
+    Route::get('order-count', 'OrderController@stat_count');
+    Route::get('product-count', 'OrderController@stat_product');
+    Route::get('money-count', 'OrderController@money_count');
+    // Operazioni Utenti
+    Route::get('getusers', 'AuthController@getUsers');
+    Route::get('deleteuser/{id}', 'AuthController@getUsers');
+    Route::post('register', 'AuthController@register');
+
 });
